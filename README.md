@@ -18,7 +18,7 @@ Application web avec Spring Boot pour gérer les utilisateurs.
 **@collaborateur** : J'ai besoin des modèles de données (User, Product)
 
 ## Technologies
-- Java 17
+- Java 21
 - Spring Boot
 - Maven
 - H2 Database
