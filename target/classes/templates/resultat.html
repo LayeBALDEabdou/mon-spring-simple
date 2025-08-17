@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Salutation</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card success-card">
+            <h1>🎉 Succès ! 🎉</h1>
+            
+            <!-- th:text récupère la variable passée depuis le contrôleur -->
+            <div class="message">
+                <p>Bonjour <strong th:text="${nom}">Nom</strong> !</p>
+                <p>Merci d'avoir utilisé notre formulaire ! 😊</p>
+            </div>
+            
+            <div class="timestamp">
+                <small>Généré le : <span th:text="${#dates.format(#dates.createNow(), 'dd/MM/yyyy HH:mm:ss')}"></span></small>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="/formulaire" class="btn btn-primary">📝 Nouveau formulaire</a>
+            <a href="/" class="btn btn-secondary">🏠 Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>
