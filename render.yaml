@@ -1,10 +1,9 @@
 services:
   - type: web
     name: mon-spring-app
-    runtime: java
+    env: java
     buildCommand: ./mvnw clean install -DskipTests
     startCommand: java -jar target/*.jar
-    env: mixed
     envVars:
       - key: SERVER_PORT
         value: 10000
